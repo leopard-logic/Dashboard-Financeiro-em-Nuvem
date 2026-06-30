@@ -25,7 +25,14 @@ arquivo = st.file_uploader("Arraste seu arquivo Excel ou CSV aqui", type=["csv",
 if arquivo is not None:
     try:
         if arquivo.name.endswith('.csv'):
-            df = pd.read_csv(arquivo)
+            # Tenta ler no padrão internacional primeiro
+            try:
+                df = pd.read_csv(arquivo)
+            except UnicodeDecodeError:
+                # Se der erro de acentuação, volta o cursor do arquivo para o início...
+                arquivo.seek(0)
+                # ...e tenta ler no formato padrão do Excel Brasileiro (latin1 e separado por ;)
+                df = pd.read_csv(arquivo, encoding='latin1', sep=';')
         else:
             df = pd.read_excel(arquivo)
         st.success("Planilha processada com sucesso!")
