@@ -11,7 +11,7 @@ Uma ponte direta entre a Engenharia de Dados e as Ciências Contábeis.
 
 ## 🔗 Acesso ao Sistema Ao Vivo
 O projeto está em produção (Deploy) e pode ser testado diretamente no navegador através do Streamlit Community Cloud:
- **[Acessar Dashboard Zetta Finance Analytics]([COLE_AQUI_O_SEU_LINK_DO_STREAMLIT])**
+ **[Acessar Dashboard Zetta Finance Analytics](https://dashboard-financeiro-em-nuvem-hauajzlbo5ubpampu8kmmu.streamlit.app/)**
 
 ---
 
